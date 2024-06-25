@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homepage</title>
+    <link rel="stylesheet" href="home-page.css" />
+    <link rel="icon" href="image/inter-logo.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link href="https://fonts.cdnfonts.com/css/giorgio-sans-trial" rel="stylesheet" />
+    <link href="https://fonts.cdnfonts.com/css/univers-lt-std" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <!-- Go To Top Button -->
+    <button onclick="topFunction()" id="topBtn">
+      <i class="fa-solid fa-angle-up fa-lg"></i>
+    </button>
+
+    <!-- Loading Screen -->
+    <div class="loader"></div>
+
+    <!-- Global Navbar -->
+    <nav class="global-navbar">
+      <a href="home-page.html"><img src="image/inter-logo.png" class="inter-logo" /></a>    
+      <div class="navbar-links">
+        <a href="inter-tv.html">INTER TV</a>
+        <a href="team-sheet.html">TEAMS</a>
+        <a href="buy-ticket.html">TICKETS</a>
+        <a href="latest-news.html">NEWS</a>
+        <a href="contacts.html">CONTACTS</a>
+        <a href="login.html">LOGIN</a>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="content">
+      <!-- Main Headline -->
+      <section class="main-headline">
+        <h1>NEW BOARD OF</h1>
+        <h1 style="margin-top: -50px">DIRECTORS</h1>
+      </section>
+
+      <!-- Discover More -->
+      <section class="discover-more">
+        <div class="discover-text">
+          <h5>DISCOVER MORE</h5>
+        </div>
+        <div class="discover-sponsor">
+          <a href="https://my1.konami.net/en_US"><img src="image/konami.png"/></a>
+          <a href="https://www.konami.com/efootball/en/"><img src="image/efootball.png" style="margin-left: 30px"/></a>
+        </div>
+      </section>
+
+      <!-- Inter History -->
+      <section class="inter-history">
+        <div class="history-content">
+          <div class="left">
+            <img src="image/inter-history.jpg" />
+          </div>
+          <div class="right">
+            <h2>BEYOND BOUNDARIES,<br />BLACK AND BLUE</h2>
+            <p>
+              Founded in 1908, is a renowned Italian<br />football club based in Milan. 
+              Throughout<br />its rich history, Inter has achieved domestic<br />and 
+              international successes, solidifying its<br />reputation as one of 
+              most success football<br />team in Europe and in the world.
+            </p>
+            <a href="inter-history.html">
+              <button>READ MORE
+                <i class="fa-solid fa-caret-right fa-xs" style="margin-left: 10px"></i>
+              </button>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Latest Headline -->
+      <section class="latest-headline">
+        <div class="headline-title">
+          <h1>LATEST HEADLINES</h1>
+        </div>
+        <div class="headline-wrap">
+          <div class="headline">
+            <div class="headline-img">
+              <div>
+                <span><img src="image/headline-1.png" /></span>
+                <h4>TEAM - <span style="color: grey">13 Hours Ago</span></h4>
+                <p>Euro 2024 : Sommer starts in Swiss<br />victory over Hungary</p>
+              </div>
+              <div>
+                <span><img src="image/headline-2.png" /></span>
+                <h4 style="margin-left: 5px">PLAYER - <span style="color: grey">18 Hours Ago</span></h4>
+                <p style="margin-left: 5px">Carlos Augusto : Reliability and self -<br />sacrifice for ourself</p>
+              </div>
+              <div>
+                <span><img src="image/headline-3.png" /></span>
+                <h4 style="margin-left: 5px">TEAM - <span style="color: grey">Yesterday</span></h4>
+                <p style="margin-left: 5px">Euro 2024 Starts : Nine Nerazzurri<br />have lifted the trophy</p>
+              </div>
+            </div>
+            <div class="headline-img">
+              <div>
+                <span><img src="image/headline-4.png" /></span>
+                <h4>TEAM - <span style="color: grey">Wednesday</span></h4>
+                <p>Inter and Nicolò Barella together<br />until 2029</p>
+              </div>
+              <div>
+                <span><img src="image/headline-5.png" /></span>
+                <h4 style="margin-left: 5px">INTER WOMAN - <span style="color: grey">Wednesday</span></h4>
+                <p style="margin-left: 5px">Inter and Beatrix Fördős together<br />until 2027</p>
+              </div>
+              <div>
+                <span><img src="image/headline-6.png" /></span>
+                <h4 style="margin-left: 5px">COMMUNITY - <span style="color: grey">Tuesday</span></h4>
+                <p style="margin-left: 5px">TST : A visit from Internazionale Milano<br />to Carolina Hurricanes</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slider Button -->
+      <div class="img-button">
+        <i class="fa-solid fa-chevron-left fa-xl" style="color: #ffffff" id="backBtn"></i>
+        <i class="fa-solid fa-chevron-right fa-xl" style="color: #ffffff" id="nextBtn"></i>
+      </div>
+
+      <!-- Honours -->
+      <section class="honours">
+        <h2>HONOURS</h2>
+        <div class="container1">
+          <div>
+            <img src="image/seriea-trophy.png" style="margin-top: -4px" />
+            <h4 style="margin-top: -39px">20</h4>
+            <p>Serie A</p>
+          </div>
+          <div>
+            <img src="image/supercoppa-trophy.png" style="margin-top: -3px; height: 120px" />
+            <h4>8</h4>
+            <p>Supercoppa Italiana</p>
+          </div>
+          <div>
+            <img src="image/ucl-trophy.png" style="margin-top: -5px; height: 122px" />
+            <h4>3</h4>
+            <p>Champions League</p>
+          </div>
+          <div>
+            <img src="image/coppa-trophy.png" style="margin-top: -3px; height: 120px" />
+            <h4>3</h4>
+            <p>Coppa Italia</p>
+          </div>
+        </div>
+        <div class="container2">
+          <div>
+            <img src="image/cwc-trophy.png" style="margin-top: -3px; height: 120px" />
+            <h4>1</h4>
+            <p>Club World Cup</p>
+          </div>
+          <div>
+            <img src="image/intercontinentale-trophy.png" style="margin-top: -3px; height: 120px" />
+            <h4>3</h4>
+            <p>Intercontinentale</p>
+          </div>
+          <div>
+            <img src="image/uel-trophy.png" style="margin-top: -3px; height: 120px" />
+            <h4>3</h4>
+            <p>Europa League</p>
+          </div>
+        </div>
+        <div class="advertisement">
+          <a href="https://landing.telepass.com/promozione-telepass-plus-prospect-inter/">
+            <img src="image/advertisement.png"/>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-title">
+          <h1>FORZA INTER</h1>
+        </div>
+        <div class="footer-icon">
+          <div class="icon-upper">
+            <a href="https://t.me/inter">
+              <i class="fa-brands fa-telegram fa-2xl" style="color: #ffffff"></i></a>
+            <a href="https://www.linkedin.com/company/fc-internazionale-milano/">
+              <i class="fa-brands fa-linkedin-in fa-2xl" style="color: #ffffff"></i></a>
+            <a href="https://x.com/Inter_en">
+              <i class="fa-brands fa-x-twitter fa-2xl" style="color: #ffffff"></i></a>
+          </div>
+          <div class="icon-lower">
+            <a href="https://www.youtube.com/user/INTER">
+              <i class="fa-brands fa-youtube fa-2xl" style="color: #ffffff"></i></a>
+            <a href="https://www.tiktok.com/@inter">
+              <i class="fa-brands fa-tiktok fa-2xl" style="color: #ffffff"></i></a>
+            <a href="https://www.facebook.com/Inter/">
+              <i class="fa-brands fa-square-facebook fa-2xl" style="color: #ffffff"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-section">
+        <div class="footer-info">
+          <ul class="footer-links">
+            <li><h4>NEWS</h4></li>
+            <li><a href="#">TEAMS</a></li>
+            <li><a href="#">INTER TV</a></li>
+            <li><a href="#">INTER APP</a></li>
+            <li><a href="#">INTER STORE</a></li>
+          </ul>
+        </div>
+        <div class="footer-info">
+          <ul class="footer-links">
+            <li><h4>CLUB</h4></li>
+            <li><a href="#">Benefits</a></li>
+            <li><a href="#">Experience</a></li>
+            <li><a href="#">Find The Clubs</a></li>
+          </ul>
+        </div>
+        <div class="footer-info">
+          <ul class="footer-links">
+            <li><h4>ACADEMY</h4></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Play At Inter</a></li>
+            <li><a href="#">Where We Are</a></li>
+          </ul>
+        </div>
+        <div class="footer-info">
+          <ul class="footer-links">
+            <li><h4>CAMPUS</h4></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Who We Are</a></li>
+          </ul>
+        </div>
+        <div class="footer-info">
+          <ul class="footer-links">
+            <li><h4>CLUB</h4></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Investors</a></li>
+            <li><a href="#">Transperancy</a></li>
+            <li><a href="#">Code Of Ethics</a></li>
+          </ul>
+        </div>
+        <div class="footer-info">
+          <ul class="footer-links">
+            <li><h4>TICKETS</h4></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Parking</a></li>
+            <li><a href="#">Stadium</a></li>
+            <li><a href="#">Season Pass</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="bottom-left">
+          <p>Copyright 1995 - 2023 F.C. Internazionale Milano P.IVA 04231750151</p>
+        </div>
+        <div class="bottom-right">
+          <p>Terms Conditions & Privacy Policy</p>
+        </div>
+      </div>
+    </footer>
+    <script src="home-page.js"></script>
+  </body>
+</html>

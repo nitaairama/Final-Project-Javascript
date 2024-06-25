@@ -1,0 +1,350 @@
+@import url("https://fonts.cdnfonts.com/css/giorgio-sans-trial");
+@import url("https://fonts.cdnfonts.com/css/univers-lt-std");
+
+* {
+  outline: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+body {
+  background-color: black;
+  color: white;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* Go To Top Button */
+#topBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 50px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #011ea0;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 18px;
+}
+/* Loading Screen */
+.loader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #011ea0;
+  transition: opacity 0.75s, visibility 0.75s;
+}
+.hide-loader {
+  opacity: 0;
+  visibility: hidden;
+}
+.loader::after {
+  content: "";
+  width: 75px;
+  height: 75px;
+  border: 15px solid #dddddd;
+  border-top-color: black;
+  border-radius: 50%;
+  animation: loading 0.75s ease infinite;
+}
+@keyframes loading {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+/* Global Navbar */
+.inter-logo {
+  width: 65px;
+  height: 65px;
+  margin-left: 30px;
+  margin-top: 10px;
+}
+.global-navbar {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-family: "Univers LT Std", sans-serif;
+  font-weight: 500;
+  justify-content: space-between;
+  margin: 20px;
+}
+.navbar-links {
+  margin-right: 35px;
+}
+.navbar-links a {
+  position: relative;
+  display: inline-block;
+  margin-left: 40px;
+  margin-top: 35px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  text-decoration: none;
+  color: white;
+}
+.navbar-links a:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background-color: transparent;
+  transform: translateX(-100%);
+  transition: all 0.3s ease;
+}
+.navbar-links a:hover::after {
+  background-color: white;
+  transform: translateX(0);
+}
+.navbar-links a:hover {
+  color: white;
+}
+
+/* Title */
+.title {
+  border-bottom: 15px solid white;
+  margin-left: 65px;
+  margin-right: 65px;
+  margin-top: 100px;
+}
+.title h1 {
+  font-family: "Giorgio Sans Trial", sans-serif;
+  color: white;
+  font-size: 170px;
+  cursor: default;
+}
+
+/* Contacts */
+.contact {
+  color: white;
+  cursor: pointer;
+}
+.contact h4 {
+  font-family: "Giorgio Sans Trial", sans-serif;
+}
+.contact h3,
+.contact p {
+  font-family: "Univers LT Std", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+}
+.c1 h4 {
+  font-size: 94px;
+  margin-left: 60vh;
+  margin-top: 120px;
+  padding-top: 30px;
+  border-top: 1px solid gainsboro;
+  margin-right: 51vh;
+  letter-spacing: -0.94px;
+  line-height: 75px;
+}
+.c1 h3 {
+  margin-left: 60vh;
+  margin-top: 30px;
+}
+.c1 p {
+  margin-left: 60vh;
+  margin-right: 51vh;
+  border-bottom: 1px solid gainsboro;
+  padding-bottom: 30px;
+}
+.c2 h4 {
+  margin-top: 30px;
+  font-size: 76px;
+  margin-left: 60vh;
+  letter-spacing: -0.76px;
+  line-height: 60px;
+}
+.c2 h3 {
+  margin-left: 60vh;
+  margin-top: 30px;
+  border-bottom: 1px solid gainsboro;
+  margin-right: 51vh;
+  padding-bottom: 30px;
+}
+.c3 h4 {
+  margin-top: 30px;
+  font-size: 76px;
+  margin-left: 60vh;
+}
+.c3 h3 {
+  margin-left: 60vh;
+  margin-top: 30px;
+}
+.c3 p {
+  font-size: 16px;
+  margin-left: 60vh;
+  margin-right: 51vh;
+  border-bottom: 1px solid gainsboro;
+  padding-bottom: 30px;
+}
+.c4 h4 {
+  margin-top: 30px;
+  font-size: 76px;
+  margin-left: 60vh;
+  letter-spacing: -0.76px;
+  line-height: 60px;
+}
+.c4 h3 {
+  margin-left: 60vh;
+  margin-top: 30px;
+  border-bottom: 1px solid gainsboro;
+  margin-right: 51vh;
+  padding-bottom: 30px;
+}
+.c5 h4 {
+  margin-top: 30px;
+  font-size: 76px;
+  margin-left: 60vh;
+  letter-spacing: 0.76px;
+  line-height: 60px;
+}
+.c5 h3 {
+  margin-left: 60vh;
+  margin-top: 30px;
+}
+.c5 p {
+  font-size: 16px;
+  margin-left: 60vh;
+  margin-right: 51vh;
+  margin-top: 30px;
+  border-bottom: 1px solid gainsboro;
+  padding-bottom: 30px;
+}
+.c6 h4 {
+  margin-top: 30px;
+  font-size: 76px;
+  margin-left: 60vh;
+  letter-spacing: -0.76px;
+  line-height: 60px;
+}
+.c6 h3 {
+  margin-left: 60vh;
+  margin-top: 30px;
+  border-bottom: 1px solid gainsboro;
+  margin-right: 51vh;
+  padding-bottom: 30px;
+}
+
+/* Footer */
+.footer {
+  background-color: black;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+.footer-content {
+  display: flex;
+  margin-left: 65px;
+  margin-right: 65px;
+  margin-top: 120px;
+  border-bottom: 15px solid white;
+  align-items: center;
+}
+.footer-title {
+  color: white;
+  font-size: 70px;
+  font-family: "Giorgio Sans Trial", sans-serif;
+  cursor: default;
+}
+.footer-icon {
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+  position: absolute;
+  margin-left: 160vh;
+  margin-top: 30px;
+  cursor: pointer;
+}
+.icon-upper {
+  display: flex;
+  gap: 30px;
+}
+.icon-lower {
+  display: flex;
+  gap: 30px;
+}
+.footer-section {
+  display: flex;
+  gap: 90px;
+  font-family: "Univers LT Std", sans-serif;
+  margin-left: 65px;
+  margin-top: 10px;
+}
+.footer-links {
+  margin-top: 40px;
+}
+.footer-links li {
+  list-style: none;
+}
+.footer-info h4 {
+  color: white;
+  margin-bottom: 10px;
+  font-weight: 500;
+  cursor: default;
+}
+.footer-links a {
+  position: relative;
+  display: inline-block;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  text-decoration: none;
+  color: #abaaaa;
+}
+.footer-links a:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background-color: transparent;
+  transform: translateX(-100%);
+  transition: all 0.3s ease;
+}
+.footer-links a:hover::after {
+  background-color: white;
+  transform: translateX(0);
+}
+.footer-links a:hover {
+  color: white;
+}
+.footer-bottom {
+  display: flex;
+  gap: 300px;
+  border-top: 1px solid gainsboro;
+  font-family: "Univers LT Std", sans-serif;
+  font-size: 15px;
+  margin-left: 65px;
+  margin-right: 65px;
+  margin-top: 50px;
+}
+.footer-bottom p {
+  color: white;
+}
+.bottom-left {
+  margin-top: 50px;
+  cursor: pointer;
+}
+.bottom-right {
+  display: flex;
+  margin-top: 50px;
+  cursor: pointer;
+}

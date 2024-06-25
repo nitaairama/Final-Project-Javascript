@@ -1,0 +1,650 @@
+@import url("https://fonts.cdnfonts.com/css/giorgio-sans-trial");
+@import url("https://fonts.cdnfonts.com/css/univers-lt-std");
+
+* {
+  outline: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+body {
+  height: 5000px;
+  background-color: #011ea0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* Go To Top Button */
+#topBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 50px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #011ea0;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 18px;
+}
+/* Loading Screen */
+.loader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #011ea0;
+  transition: opacity 0.75s, visibility 0.75s;
+}
+.hide-loader {
+  opacity: 0;
+  visibility: hidden;
+}
+.loader::after {
+  content: "";
+  width: 75px;
+  height: 75px;
+  border: 15px solid #dddddd;
+  border-top-color: black;
+  border-radius: 50%;
+  animation: loading 0.75s ease infinite;
+}
+@keyframes loading {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+/* Global Navbar */
+.inter-logo {
+  width: 65px;
+  height: 65px;
+  margin-left: 30px;
+  margin-top: 10px;
+}
+.global-navbar {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-family: "Univers LT Std", sans-serif;
+  font-weight: 500;
+  justify-content: space-between;
+  margin: 20px;
+}
+.navbar-links {
+  margin-right: 35px;
+}
+.navbar-links a {
+  position: relative;
+  display: inline-block;
+  margin-left: 40px;
+  margin-top: 35px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  text-decoration: none;
+  color: white;
+}
+.navbar-links a:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0.5px;
+  background-color: transparent;
+  transform: translateX(-100%);
+  transition: all 0.3s ease;
+}
+.navbar-links a:hover::after {
+  background-color: white;
+  transform: translateX(0);
+}
+.navbar-links a:hover {
+  color: white;
+}
+
+/* Title */
+.title h1 {
+  color: white;
+  font-size: 170px;
+  margin-top: 100px;
+  margin-left: 65px;
+  cursor: default;
+  margin-right: 65px;
+  font-family: "Giorgio Sans Trial", sans-serif;
+  border-bottom: 10px solid white;
+}
+
+/* Goalkeeper */
+.goalkeeper h2 {
+  color: white;
+  margin-left: 70px;
+  margin-top: 80px;
+  cursor: default;
+  font-weight: 500;
+}
+.goalkeeper {
+  font-family: "Univers LT Std", sans-serif;
+  background-color: black;
+  font-weight: 500;
+  height: 700px;
+  margin-top: 120px;
+  cursor: pointer;
+  display: flex;
+}
+.goalkeeper > div {
+  display: flex;
+  margin-left: -170px;
+  margin-top: 150px;
+  line-height: 160px;
+  color: white;
+}
+.gk1 {
+  border: 0.5px solid grey;
+  height: 500px;
+}
+.gk2 {
+  border: 0.5px solid grey;
+  height: 500px;
+}
+.keeper img {
+  margin-top: 120px;
+  height: 378px;
+  width: 320px;
+}
+.keeper p {
+  color: grey;
+  margin-left: 30px;
+  margin-top: -135px;
+  font-size: 14px;
+}
+.keeper h4 {
+  color: white;
+  margin-top: -113vh;
+  text-align: left;
+  margin-left: 30px;
+  font-size: 20px;
+  font-weight: 500;
+}
+.keeper h1 {
+  text-align: right;
+  color: #011ea0;
+  font-family: "Giorgio Sans Trial", sans-serif;
+  font-size: 100px;
+  margin-top: -163px;
+  margin-right: 30px;
+}
+
+/* Defender */
+.defender h2 {
+  color: white;
+  margin-left: 40px;
+  cursor: default;
+  margin-top: 190px;
+  font-weight: 500;
+}
+.defender {
+  padding: 30px;
+  background-color: black;
+  height: 900px;
+  margin-top: -180px;
+  cursor: pointer;
+  display: flex;
+  font-family: "Univers LT Std", sans-serif;
+}
+.defender > div {
+  display: flex;
+  margin-top: 260px;
+  margin-left: -140.5px;
+  line-height: 160px;
+  color: white;
+}
+.def1 {
+  border: 0.5px solid grey;
+  height: 500px;
+}
+.def2 {
+  border: 0.5px solid grey;
+  height: 500px;
+}
+.def3 {
+  border: 0.5px solid grey;
+  height: 500px;
+}
+.defend img {
+  margin-top: 120px;
+  height: 378.5px;
+  width: 320px;
+}
+.defend p {
+  color: grey;
+  margin-left: 30px;
+  margin-top: -135px;
+  font-size: 14px;
+  text-align: left;
+}
+.defend h4 {
+  color: white;
+  margin-top: -113vh;
+  text-align: left;
+  margin-left: 30px;
+  font-weight: 500;
+  font-size: 20px;
+}
+.defend h1 {
+  text-align: right;
+  color: #011ea0;
+  font-family: "Giorgio Sans Trial", sans-serif;
+  font-size: 100px;
+  margin-top: -163px;
+  margin-right: 30px;
+}
+.defender2 {
+  background-color: black;
+  font-family: "Univers LT Std", sans-serif;
+  height: 500px;
+  display: flex;
+  cursor: pointer;
+}
+.defender2 > div {
+  display: flex;
+  width: 300px;
+  height: 350px;
+  margin-top: -110px;
+  margin-left: 72px;
+  text-align: center;
+  line-height: 150px;
+  color: white;
+}
+.def4 {
+  border: 0.5px solid grey;
+  height: 500px;
+}
+.def5 {
+  border: 0.5px solid grey;
+  height: 500px;
+}
+.def6 {
+  border: 0.5px solid grey;
+  height: 500px;
+}
+.defend2 img {
+  margin-top: 118px;
+  height: 380px;
+  width: 320px;
+}
+.defend2 p {
+  color: grey;
+  margin-left: 30px;
+  margin-top: -125px;
+  font-size: 14px;
+  text-align: left;
+}
+.defend2 h4 {
+  font-weight: 500;
+  color: white;
+  margin-top: -113vh;
+  text-align: left;
+  margin-left: 30px;
+  font-size: 20px;
+}
+.defend2 h1 {
+  text-align: right;
+  color: #011ea0;
+  font-size: 100px;
+  font-family: "Giorgio Sans Trial", sans-serif;
+  margin-top: -153px;
+  margin-right: 30px;
+}
+
+/* Midfielder */
+.midfielder h2 {
+  color: white;
+  margin-left: 75px;
+  font-weight: 500;
+  cursor: default;
+}
+.midfielder {
+  font-family: "Univers LT Std", sans-serif;
+  font-weight: 500;
+  display: flex;
+  cursor: pointer;
+  background-color: black;
+}
+.midfielder > div {
+  display: flex;
+  margin-top: 70px;
+  margin-left: -160px;
+  line-height: 150px;
+  color: white;
+}
+.mid1 {
+  border: 0.5px solid grey;
+  height: 500px;
+}
+.mid2 {
+  border: 0.5px solid grey;
+  height: 500px;
+}
+.mid3 {
+  border: 0.5px solid grey;
+  height: 500px;
+}
+.midfield img {
+  margin-top: 119px;
+  height: 380px;
+  width: 320px;
+}
+.midfield p {
+  color: grey;
+  margin-left: 30px;
+  margin-top: -125px;
+  font-size: 14px;
+  text-align: left;
+}
+.midfield h4 {
+  color: white;
+  margin-top: -113vh;
+  text-align: left;
+  margin-left: 30px;
+  font-size: 20px;
+  font-weight: 500;
+}
+.midfield h1 {
+  text-align: right;
+  color: #011ea0;
+  font-size: 100px;
+  font-family: "Giorgio Sans Trial", sans-serif;
+  margin-top: -153px;
+  margin-right: 30px;
+}
+.midfielder2 {
+  display: flex;
+  background-color: black;
+  font-family: "Univers LT Std", sans-serif;
+  height: 600px;
+  cursor: pointer;
+}
+.midfielder2 > div {
+  display: flex;
+  margin-left: 74px;
+  line-height: 150px;
+  color: white;
+}
+.mid4 {
+  border: 0.5px solid grey;
+  height: 500px;
+}
+.mid5 {
+  border: 0.5px solid grey;
+  height: 500px;
+}
+.mid6 {
+  border: 0.5px solid grey;
+  height: 500px;
+}
+.midfield2 img {
+  margin-top: 118px;
+  height: 380px;
+  width: 320px;
+}
+.midfield2 p {
+  color: grey;
+  margin-left: 30px;
+  margin-top: -125px;
+  font-size: 14px;
+  text-align: left;
+}
+.midfield2 h4 {
+  color: white;
+  margin-top: -113vh;
+  text-align: left;
+  margin-left: 30px;
+  font-size: 20px;
+  font-weight: 500;
+}
+.midfield2 h1 {
+  text-align: right;
+  color: #011ea0;
+  font-size: 100px;
+  font-family: "Giorgio Sans Trial", sans-serif;
+  margin-top: -153px;
+  margin-right: 30px;
+}
+
+/* Attacker */
+.attacker h2 {
+  color: white;
+  margin-left: 75px;
+  font-weight: 500;
+  cursor: default;
+}
+.attacker {
+  display: flex;
+  background-color: black;
+  height: 800px;
+  cursor: pointer;
+  font-family: "Univers LT Std", sans-serif;
+}
+.attacker > div {
+  display: flex;
+  margin-top: 50px;
+  margin-left: -160px;
+  padding: 20px;
+  line-height: 150px;
+  color: white;
+}
+.att1 {
+  border: 0.5px solid grey;
+  height: 500px;
+}
+.att2 {
+  border: 0.5px solid grey;
+  height: 500px;
+}
+.att3 {
+  border: 0.5px solid grey;
+  height: 500px;
+}
+.attack img {
+  margin-top: 119px;
+  height: 380px;
+  width: 320px;
+}
+.attack p {
+  color: grey;
+  margin-left: 30px;
+  margin-top: -125px;
+  font-size: 14px;
+  text-align: left;
+}
+.attack h4 {
+  color: white;
+  margin-top: -113vh;
+  text-align: left;
+  margin-left: 30px;
+  font-size: 20px;
+  font-weight: 500;
+}
+.attack h1 {
+  text-align: right;
+  color: #011ea0;
+  font-size: 100px;
+  font-family: "Giorgio Sans Trial", sans-serif;
+  margin-top: -153px;
+  margin-right: 30px;
+}
+.attacker2 {
+  display: flex;
+  cursor: pointer;
+  font-family: "Univers LT Std", sans-serif;
+  background-color: black;
+  height: 400px;
+}
+.attacker2 > div {
+  display: flex;
+  margin-left: 73.5px;
+  margin-top: -230px;
+  line-height: 150px;
+  color: white;
+}
+.att4 {
+  border: 0.5px solid grey;
+  height: 500px;
+}
+.att5 {
+  border: 0.5px solid grey;
+  height: 500px;
+}
+.att6 {
+  border: 0.5px solid grey;
+  height: 500px;
+}
+.attack2 img {
+  margin-top: 119px;
+  height: 380px;
+  width: 320px;
+}
+.attack2 p {
+  color: grey;
+  margin-left: 30px;
+  margin-top: -125px;
+  font-size: 14px;
+  text-align: left;
+}
+.attack2 h4 {
+  color: white;
+  margin-top: -113vh;
+  text-align: left;
+  margin-left: 30px;
+  font-size: 20px;
+  font-weight: 500;
+}
+.attack2 h1 {
+  text-align: right;
+  color: #011ea0;
+  font-size: 100px;
+  font-family: "Giorgio Sans Trial", sans-serif;
+  margin-top: -153px;
+  margin-right: 30px;
+}
+
+/* Footer */
+.footer {
+  background-color: black;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+.footer-content {
+  display: flex;
+  margin-left: 65px;
+  margin-right: 65px;
+  margin-top: 0px;
+  border-bottom: 15px solid white;
+  align-items: center;
+}
+.footer-title {
+  color: white;
+  font-size: 70px;
+  font-family: "Giorgio Sans Trial", sans-serif;
+  cursor: default;
+}
+.footer-icon {
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+  position: absolute;
+  margin-left: 160vh;
+  margin-top: 30px;
+  cursor: pointer;
+}
+.icon-upper {
+  display: flex;
+  gap: 30px;
+}
+.icon-lower {
+  display: flex;
+  gap: 30px;
+}
+.footer-section {
+  display: flex;
+  gap: 90px;
+  font-family: "Univers LT Std", sans-serif;
+  margin-left: 65px;
+  margin-top: 10px;
+}
+.footer-links {
+  margin-top: 40px;
+}
+.footer-links li {
+  list-style: none;
+}
+.footer-info h4 {
+  color: white;
+  margin-bottom: 10px;
+  font-weight: 500;
+  cursor: default;
+}
+.footer-links a {
+  position: relative;
+  display: inline-block;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  text-decoration: none;
+  color: #abaaaa;
+}
+.footer-links a:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background-color: transparent;
+  transform: translateX(-100%);
+  transition: all 0.3s ease;
+}
+.footer-links a:hover::after {
+  background-color: white;
+  transform: translateX(0);
+}
+.footer-links a:hover {
+  color: white;
+}
+.footer-bottom {
+  display: flex;
+  gap: 300px;
+  border-top: 1px solid gainsboro;
+  font-family: "Univers LT Std", sans-serif;
+  font-size: 15px;
+  margin-left: 65px;
+  margin-right: 65px;
+  margin-top: 50px;
+}
+.footer-bottom p {
+  color: white;
+}
+.bottom-left {
+  margin-top: 50px;
+  cursor: pointer;
+}
+.bottom-right {
+  display: flex;
+  margin-top: 50px;
+  cursor: pointer;
+}
